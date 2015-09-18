@@ -1,18 +1,5 @@
-(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module unless amdModuleId is set
-    define([], function () {
-      return (root['Chartist'] = factory());
-    });
-  } else if (typeof exports === 'object') {
-    // Node. Does not work with strict CommonJS, but
-    // only CommonJS-like environments that support module.exports,
-    // like Node.
-    module.exports = factory();
-  } else {
-    root['Chartist'] = factory();
-  }
-}(this, function () {
+console.log('Loading modifiled chartist in global space directly.');
+console.log('This is to work around the inline inclusion in IPython Notebook.');
 
 /* Chartist.js 0.9.4
  * Copyright © 2015 Gion Kunz
@@ -4073,6 +4060,3 @@ var Chartist = {
 
 }(window, document, Chartist));
 
-return Chartist;
-
-}));
